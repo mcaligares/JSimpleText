@@ -4,19 +4,18 @@ import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.beans.PropertyChangeListener;
-import javax.swing.JTextField;
+import javax.swing.JTextArea;
 import mike.utils.jsimpletext.exceptions.SimpleTextException;
 
 /**
- * JSimpleTextField.java
- * Created on 19/02/2012, 18:53:19
+ * JSimpleTextArea.java
+ * Created on 06/03/2012, 18:30:08
  * 
  * @author Miguel Augusto Caligares
  * @email mcaligares@gmail.com
- * @version 0.1
  */
-public class JSimpleTextField extends JTextField implements KeyListener{
-    private static final long serialVersionUID = 1505256564256217821L;
+public class JSimpleTextArea extends JTextArea implements KeyListener {
+    private static final long serialVersionUID = -5002150327909975262L;
     public static final String PROPERTY_FIELD_NAME = "fieldName";
     public static final String PROPERTY_LENGTH = "length";
     public static final String PROPERTY_STATE = "state";
@@ -25,18 +24,18 @@ public class JSimpleTextField extends JTextField implements KeyListener{
     protected boolean state;
     protected Color color;
     protected int length;
-
-    public JSimpleTextField() {
-        this(10,"SimpleTextField field",true);
+    
+    public JSimpleTextArea() {
+        this(10,"SimpleTextArea field",true);
     }
-    public JSimpleTextField(String fieldName, boolean state) {
+    public JSimpleTextArea(String fieldName, boolean state) {
         this(10,fieldName,true);
     }
-    public JSimpleTextField(int length, String fieldName) {
+    public JSimpleTextArea(int length, String fieldName) {
         this(length,fieldName,true);
     }
     @SuppressWarnings("LeakingThisInConstructor")
-    public JSimpleTextField(int length, String fieldName, boolean state) {
+    public JSimpleTextArea(int length, String fieldName, boolean state) {
         this.state = state;
         this.length = length;
         this.fieldName = fieldName;
